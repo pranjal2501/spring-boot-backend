@@ -10,24 +10,24 @@ public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long aId;
 
     @Column(nullable = false)
-    private String name;
+    private String aName;
 
     @Column(unique = true)
-    private String mobileNumber;
+    private String aMobileNumber;
 
     @Column(unique = true)
-    private String mail;
+    private String aMail;
 
     @Column(nullable = false)
-    private String password;
+    private String aMassword;
 
-    private String livePhoto;
+    private String aLivePhoto;
 
-    private String area;
+    private String aArea;
 
     @Column(nullable = true)
-    private String adharCard;
+    private String aAdharNo;
 }
