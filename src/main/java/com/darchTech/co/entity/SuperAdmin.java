@@ -10,22 +10,22 @@ public class SuperAdmin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long sId;
 
     @Column(nullable = false)
-    private String name;
+    private String sName;
 
     @Column(unique = true)
-    private String mobileNumber;
+    private String sMobileNumber;
 
     @Column(unique = true)
-    private String mail;
+    private String sMail;
 
     @Column(nullable = false)
-    private String password;
+    private String sPassword;
 
-    private String photo;
+    private String sPhoto;
 
     @Column(nullable = true)
-    private String aadhaar;
+    private String sAadhar;
 }
