@@ -2,12 +2,18 @@ package com.darchTech.co.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(
-    name = "super_admin",
-    @UniqueConstraint = (columnNames = "email"),
-    @UniqueContstraint = (columnNames = "mobile_number")
+        name = "super_admins",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "s_mobile_number"),
+                @UniqueConstraint(columnNames = "s_mail")
+        }
 )
 @Getter
 @Setter
@@ -23,7 +29,7 @@ public class SuperAdmin {
     @Column(name = "s_mobile_number", nullable = false, length = 10)
     private String sMobileNumber;
 
-    @Column(name = "s_email", nullable = false, length = 150)
+    @Column(name = "s_mail", nullable = false, length = 150)
     private String sMail;
 
     @Column(name = "password", nullable = false)
@@ -33,7 +39,7 @@ public class SuperAdmin {
     private String sPhotoUrl;
 
    @Column(name = "s_aadhar_number", length = 12)
-    private String sAadhar
+    private String sAadhar;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
