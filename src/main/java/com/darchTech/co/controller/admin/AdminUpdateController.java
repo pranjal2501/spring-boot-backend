@@ -3,16 +3,16 @@ package com.darchTech.co.controller.admin;
 import com.darchTech.co.dto.AdminUpdateDTO;
 import com.darchTech.co.entity.Admin;
 import com.darchTech.co.service.admin.AdminService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/admin/update")
+@RequiredArgsConstructor
 public class AdminUpdateController {
 
-    @Autowired
     private AdminService adminService;
 
     @PutMapping("/")

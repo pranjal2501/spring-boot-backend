@@ -1,12 +1,16 @@
-package com.darchTech.co.dto.auth;
+    package com.darchTech.co.dto.auth;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+    import lombok.AllArgsConstructor;
+    import lombok.Getter;
+    import lombok.NoArgsConstructor;
+    import lombok.Setter;
 
-@Getter
-@AllArgsConstructor
-public class RegisterAdminResponseDTO {
-    private Long aId;
-    private String aMail;
-    private String message;
-}
+    @Getter
+    @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public class RegisterAdminResponseDTO {
+        private Long id;
+        private String email;
+        private String message;
+    }

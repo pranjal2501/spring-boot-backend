@@ -30,7 +30,7 @@ public class SuperAdmin {
     private String sMobileNumber;
 
     @Column(name = "s_mail", nullable = false, length = 150)
-    private String sMail;
+    private String email;
 
     @Column(name = "password", nullable = false)
     private String sPassword;
