@@ -27,7 +27,7 @@ public class AuthController {
    private final AuthService authService;
    private final AuthenticationManager authManager;
    private final JwtService jwtService;
-   private final UserDetailsService userDetailsService; // Added this injection
+   private final UserDetailsService userDetailsService;
 
    @PostMapping("/login")
    public ResponseEntity<?> login(@Valid @RequestBody LoginRequestDTO request) {
